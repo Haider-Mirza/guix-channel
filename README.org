@@ -1,0 +1,5 @@
+#+TITLE: =Guix Channel=
+#+AUTHOR: Haider Mirza
+#+DESCRIPTION: This repo is a Guix channel containing my packaged Guix packages.
+
+* Guix Channel
