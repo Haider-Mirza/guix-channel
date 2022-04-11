@@ -7,5 +7,5 @@ This repository has some of my personal packaged Guix packages.
 * Installation
 To install a certain package, run:
 #+BEGIN_SRC sh
-$ guix package --install-from-file=my-hello.scm
+$ guix package --install-from-file=foo.scm
 #+END_SRC
