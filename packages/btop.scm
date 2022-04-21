@@ -21,10 +21,10 @@
       (base32 "1v0lj296bzwgs29hv9z3r82fwmibiqgsvsqqh2fimxs0jmld7c2v"))))
    (build-system gnu-build-system)
    (native-inputs
-    (list sed gcc-11))     ; for scripts/MakeHeader.py
+    (list sed gcc-11))
    (arguments
     '(#:make-flags (list (string-append "PREFIX=" %output))
-      #:tests? #f      ; bats test fails with loading load.bash
+      #:tests? #f
       #:phases (modify-phases %standard-phases (delete 'configure))))
    (home-page "https://github.com/aristocratos/btop")
    (synopsis "Linux/FreeBSD resource monitor")
