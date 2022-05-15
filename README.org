@@ -3,7 +3,7 @@
 #+DESCRIPTION: This repo is a Guix channel containing my packaged Guix packages.
 
 * Guix Channel
-This repository has some of my personal packaged Guix packages.
+This repository has some of my personally packaged Guix packages.
 * Installation
 To install a certain package, run:
 #+BEGIN_SRC sh

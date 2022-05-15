@@ -16,7 +16,7 @@
 (define-public ispc
   (package
    (name "ispc")
-   (version "1.17.0")
+   (version "1.18.0")
    (source
     (origin
      (method git-fetch)
@@ -25,14 +25,15 @@
            (commit (string-append "v" version))))
      (file-name (git-file-name name version))
      (sha256
-      (base32 "1klk1mhxjvyhzf1kqznimdb2f96czp76k8riv8yda87gfrk7cmfn"))))
+      (base32 "0wc73km5p3kcmi0ai9n7wd0d06wk7jxqwvari29dska32r9g73vq"))))
    (build-system cmake-build-system)
     (arguments
      `(#:configure-flags
-       (list "-DNCURSES_TINFO_LIBRARY=OFF")))
+       (list (string-append "-DCURSES_CURSES_LIBRARY=" "/gnu/store/zzkly5rbfvahwqgcs7crz0ilpi7x5g5p-ncurses-6.2/"))))
+    ;; ^ this is far from perfect
     (native-inputs
      (list cmake python bison flex glibc m4 git clang-toolchain ncurses llvm))
-   (home-page "https://www.openimagedenoise.org/")
+    (home-page "https://www.openimagedenoise.org/")
    (synopsis "compiler for a variant of the C programming language")
    (description
     "ispc is a compiler for a variant of the C programming language, with extensions for single program, multiple data programming.")
